@@ -42,21 +42,24 @@ Then add the dependancy in your pom.xml file like so :
 
 ```
 
+Note: this dependancy is already added in the source.
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+To run the sample, install Maven, Java 1.8+, MySql and download the code. 
+Edit the application.properties file to setup your DB connection.
 
-Say what the step will be
+And simply run this command in the source root
 
-```
-Give the example
-```
-
-And repeat
 
 ```
-until finished
+mvn springboot:run
+```
+
+And point your browser to 
+
+```
+http://localhost:8080
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
