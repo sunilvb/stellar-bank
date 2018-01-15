@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+<title>Login and Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Login and Registration Form with HTML5 and CSS3" />
+<meta name="keywords"
+	content="html5, css3, form, switch, animation, :target, pseudo-class" />
+<meta name="author" content="Codrops" />
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/animate-custom.css}" />
+</head>
+<body>
+	<div class="container">
+
+		<header>
+			<h1>
+				<span>Stellar Bank</span> <br>Transfer Money Anywhere Anytime
+				!!
+			</h1>
+
+		</header>
+		<section>
+			<div id="container_demo">
+
+				<div id="wrapper">
+					<div id="login" class="animate form">
+
+						<form th:action="@{/logout}" method="get">
+							<table width="100%">
+								<tr>
+									<td><button type="Submit">Logout</button></td>
+									<td><span th:utext="${userName}"
+										style="text-align: right;"></span></td>
+								</tr>
+
+							</table>
+
+						</form>
+						<h1>Account Details</h1>
+
+						<br> <br>
+						<table width="100%" id="account">
+							<tr>
+								<th>Name</th>
+								<th>Balance</th>
+							</tr>
+							<tr data-th-each="account : ${accounts}">
+								<td data-th-text="${account.accountName}"></td>
+								<td data-th-text="${account.balance}+' XLM'"></td>
+							</tr>
+							<tr>
+								<td colspan="2"><a th:href="@{/admin/create}">Open a
+										New Account</a></td>
+
+							</tr>
+							<tr>
+								<td>Network Name:</td>
+								<td><span th:utext="${network}" style="text-align: right;"></td>
+							</tr>
+						</table>
+					</div>
+
+
+
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
+

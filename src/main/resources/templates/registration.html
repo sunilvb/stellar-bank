@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}"  />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"  />
+		<link rel="stylesheet" type="text/css" th:href="@{/css/animate-custom.css}"  />
+    </head>
+    <body>
+        <div class="container">
+            
+            <header>
+                <h1><span>Stellar Bank</span> <br>Login and Registration Form </h1>
+				
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        	
+                        <div id="login" class="animate form">
+                            <form  autocomplete="off" action="#" th:action="@{/registration}" th:object="${user}" method="post" role="form"> 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="uname" data-icon="f">First Name</label>
+                                    <input  th:field="*{name}" required="required" type="text" placeholder="First Name" />
+                                </p>
+                                <p> 
+                                    <label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="uname" data-icon="l">Last Name</label>
+                                    <input th:field="*{lastName}" required="required" type="text" placeholder="Last Name" />
+                                </p>
+                                <p> 
+                                    <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" for="emailsignup" class="youmail" data-icon="e" > Your email (this is your username)</label>
+                                    <input th:field="*{email}" required="required" type="email" placeholder="Your email"/> 
+                                </p>
+                                <p> 
+                                    <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}" for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                    <input th:field="*{password}" required="required" type="password" placeholder="Password"/>
+                                </p>
+                                <p> 
+                                    
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="Confirm Password"/>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit" value="Sign up"/> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a th:href="@{/login}" class="to_register"> Let's log in </a>
+								</p>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
