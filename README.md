@@ -88,7 +88,7 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Spring Boot](https://projects.spring.io/spring-boot/) - The web framework used
-* [Spring Security] (https://projects.spring.io/spring-security/) - User authentication
+* [Spring Security](https://projects.spring.io/spring-security/) - User authentication
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [MySql](https://rometools.github.io/rome/) - RDBMS
 
@@ -102,7 +102,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Sunil Vishnubhotla** - *Initial work* - [sunilvb](https://github.com/sunilvb)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
