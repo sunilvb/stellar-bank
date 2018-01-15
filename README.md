@@ -10,6 +10,7 @@ The following topics are covered in this tutorial:
 
 To run the sample, install Maven, Java 1.8+, MySql and download the code. 
 Edit the application.properties file to setup your DB connection.
+
 And simply run this command in the source root
 mvn springboot:run
 
