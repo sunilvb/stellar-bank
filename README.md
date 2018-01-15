@@ -10,7 +10,7 @@ The following topics are covered in this tutorial:
 
 ## Getting Started
 
-download the SDK from https://github.com/stellar/java-stellar-sdk to your local file system
+download the SDK from [Stellar.org](https://github.com/stellar/java-stellar-sdk) to your local file system
 
 notice that this a jar file that needs to be imported into your local Maven repo.
 
