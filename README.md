@@ -92,6 +92,7 @@ Add additional notes about how to deploy this on a live system
 
 * [Spring Boot](https://projects.spring.io/spring-boot/) - The web framework used
 * [Spring Security](https://projects.spring.io/spring-security/) - User authentication
+* [Spring Data JPA](https://projects.spring.io/spring-data-jpa//) - Data access layer
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [MySql](https://rometools.github.io/rome/) - RDBMS
 
