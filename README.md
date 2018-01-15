@@ -62,6 +62,10 @@ And point your browser to
 http://localhost:8080
 ```
 
+login screen :
+
+![alt text](https://github.com/sunilvb/stellar-bank/tree/master/docs/login.png)
+
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
