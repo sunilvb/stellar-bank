@@ -94,6 +94,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
+* [Stellar SDK](https://github.com/stellar/java-stellar-sdk) - Stellar's Java SDK
 * [Spring Boot](https://projects.spring.io/spring-boot/) - The web framework used
 * [Spring Security](https://projects.spring.io/spring-security/) - User authentication
 * [Spring Data JPA](https://projects.spring.io/spring-data-jpa//) - Data access layer
