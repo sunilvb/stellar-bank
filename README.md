@@ -8,6 +8,28 @@ The following topics are covered in this tutorial:
 4. Open another account and transfer 100 XLM from the first
 5. View account details and blalances
 
+First things first - download the SDK from https://github.com/stellar/java-stellar-sdk
+
+notice that this a jar file that needs to be imported into your local Maven repo.
+
+Use the following command to import the SDK jar file into your Maven repo:
+
+mvn install:install-file -Dfile=/<path to the sdk jar> -DgroupId=<package name> -DartifactId=<packageId> -Dversion=<version> -Dpackaging=jar
+  
+For example : 
+
+mvn install:install-file -Dfile=/Users/sunil_vishnubhotla/Downloads/stellar-sdk.jar -DgroupId=com.stellar.code -DartifactId=stellar -Dversion=0.1.14 -Dpackaging=jar
+
+Then add the dependancy in your pom.xml file like so :
+
+<dependency>
+     <groupId>com.stellar.code</groupId>
+     <artifactId>stellar</artifactId>
+     <version>0.1.14</version>
+</dependency>
+
+Note: this dependancy is already added in the source.
+
 To run the sample, install Maven, Java 1.8+, MySql and download the code. 
 Edit the application.properties file to setup your DB connection.
 
