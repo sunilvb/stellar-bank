@@ -1,6 +1,6 @@
 # Banking on Blockchain with Stellar - Tutorial
 
-This is a tutorial for creating a simple banking application with Stellar.org and Lumen (XLM) as currency.
+This is a tutorial for creating a simple banking application with [Stellar's](https://www.stellar.org/) hybrid blockchain and Lumen (XLM) as currency.
 The following topics are covered in this tutorial:
 1. Working with Stellar Java SDK
 2. Creating a fully functional web application using Spring Boot, Spring Security and MySql
