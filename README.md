@@ -8,9 +8,13 @@ The following topics are covered in this tutorial:
 4. Open another account and transfer 100 XLM from the first
 5. View account details and blalances
 
-First things first - download the SDK from https://github.com/stellar/java-stellar-sdk
+## First things first  
+
+download the SDK from https://github.com/stellar/java-stellar-sdk to your local file system
 
 notice that this a jar file that needs to be imported into your local Maven repo.
+
+## Import the jar into Maven repo
 
 Use the following command to import the SDK jar file into your Maven repo:
 
