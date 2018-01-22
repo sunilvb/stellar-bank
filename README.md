@@ -1,11 +1,17 @@
 # Banking on Blockchain with Stellar - Tutorial
 
+## What is Stellar?
+
+According to [Stellar.org](https://www.stellar.org/) : Stellar is open-source, distributed payments infrastructure. Using the Stellar network, you can build mobile wallets, banking tools, smart devices that pay for themselves, and just about anything else you can dream up involving payments! Even though Stellar is a complex distributed system, working with it doesn’t need to be complicated.
+
+## What will we build in this tutorial
+
 This is a tutorial for creating a simple banking application with [Stellar's](https://www.stellar.org/) hybrid blockchain and Lumen (XLM) as currency.
 The following topics are covered in this tutorial:
 1. Working with Stellar Java SDK
-2. Creating a fully functional web application using Spring Boot, Spring Security and MySql
-3. Open an Account and fund 10,000 XLM
-4. Open another account and transfer 100 XLM from the first
+2. Creating a Stellar Bank UI using Spring Boot, Spring Security and MySql
+3. Open an Account and fund 10,000 XLM 
+4. Open another account and transfer 100 XLM (or any amount)from one account to another
 5. View account details and blalances
 
 ## Getting Started
