@@ -82,31 +82,28 @@ login screen :
 
 ![alt text](docs/login.png)
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Asuming your DB is up and running, you should see the login screen. As a first time user, go ahead and click the "Join us" link to create a new user and get 10,000 Lumens depositted into your account.
+All this happens in the AccountService.java class as shown below:
 
 ```
-Give an example
+KeyPair pair = KeyPair.random();
+String seed = new String(pair.getSecretSeed());
+key = pair.getAccountId();
+String friendbotUrl = String.format(friendbot, key);
+
+response = new URL(friendbotUrl).openStream();
+String body = new Scanner(response, "UTF-8").useDelimiter("\\A").next();
+System.out.println("New Stellar account created :)\n" + body);
+
+Account acc = new Account(key, seed, name, email);
+accountRepository.save(acc);
 ```
+We start by calling the Stellar SDK's KeyPair object's random() method that generates and assigns our accout a unique key pair.
+Each account has a privete key also called the secret seed and a public key that is assigned when you create a Stellsr account.
+As with any blockchain implementation, you need a private key to sign all your transactions to ensure they orignate from you and that  no one else can tamper with it. You do not share your privete key(hence the word private) with anyone but you do send the public key along with the transaction for the system to verify it was you who started the transaction and that you have the needed funds to carry out the transaction.
 
-### And coding style tests
+We then seed this account using the Stellar's Friendbot service to give us 10,000 XLMs.
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
