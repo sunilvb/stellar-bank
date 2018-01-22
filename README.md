@@ -82,12 +82,13 @@ login screen :
 
 ![alt text](docs/login.png)
 
-Asuming your DB is up and running, you should see the login screen. As a first time user, go ahead and click the "Join us" link to create a new user with your email and a password. Use these credentials to login after you finish registering. 
+Asuming your MySql DB is up and running, you should see the login screen. As a first time user, go ahead and click the "Join us" link to create a new user with your email and a password. Use these credentials to login after you finish registering. 
 
-### Use Registration
+### User Registration
 
-The following method in the is used to accomplish this:
+The following method in the is used to accomplish this in LoginController.java :
 ```
+...
 @RequestMapping(value = "/registration", method = RequestMethod.POST)
 public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
 	ModelAndView modelAndView = new ModelAndView();
@@ -108,11 +109,19 @@ public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult)
 	}
 	return modelAndView;
 }
+...
 ```
 ### Creating a Stellar account
 
-After you login
-This happens in the AccountService.java class as shown below:
+![alt text](docs/home.png)
+
+After you login click the "Open a New Account" link to create a new account associated with your User credentials.
+
+![alt text](docs/create.png)
+
+Give your account a nick name and click the Open Account button.
+
+At this point the AccountService is called to create a new account as shown below:
 
 ```
 ...
@@ -143,6 +152,12 @@ private String network;
 @Value("${stellar.network.friendbot}")
 private String friendbot;
 ```
+
+### Querying the balance
+
+After we create and seed the account we can query the network to get the upto date account details:
+
+
 
 ## Built With
 
