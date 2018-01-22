@@ -82,10 +82,38 @@ login screen :
 
 ![alt text](docs/login.png)
 
-Asuming your DB is up and running, you should see the login screen. As a first time user, go ahead and click the "Join us" link to create a new user and get 10,000 Lumens depositted into your account.
-All this happens in the AccountService.java class as shown below:
+Asuming your DB is up and running, you should see the login screen. As a first time user, go ahead and click the "Join us" link to create a new user with your email and a password. Use these credentials to login after you finish registering. 
+
+The following method in the is used to accomplish this:
+```
+@RequestMapping(value = "/registration", method = RequestMethod.POST)
+	public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
+		ModelAndView modelAndView = new ModelAndView();
+		User userExists = userService.findUserByEmail(user.getEmail());
+		if (userExists != null) {
+			bindingResult.rejectValue("email", "error.user",
+					"There is already a user registered with the email provided");
+		}
+		if (bindingResult.hasErrors()) {
+			System.out.println("There was an error...");
+			modelAndView.setViewName("registration");
+		} else {
+			userService.saveUser(user);
+			modelAndView.addObject("successMessage", "User registered successfully. Please login.");
+			modelAndView.addObject("user", new User());
+			modelAndView.setViewName("login");
+
+		}
+		return modelAndView;
+	}
+```
+### Creating an account
+
+After you login
+This happens in the AccountService.java class as shown below:
 
 ```
+...
 KeyPair pair = KeyPair.random();
 String seed = new String(pair.getSecretSeed());
 key = pair.getAccountId();
@@ -97,6 +125,7 @@ System.out.println("New Stellar account created :)\n" + body);
 
 Account acc = new Account(key, seed, name, email);
 accountRepository.save(acc);
+...
 ```
 We start by calling the Stellar SDK's KeyPair object's random() method that generates and assigns our accout a unique key pair.
 Each account has a privete key also called the secret seed and a public key that is assigned when you create a Stellsr account.
