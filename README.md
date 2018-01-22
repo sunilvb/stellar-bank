@@ -112,7 +112,14 @@ public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult)
 ...
 ```
 ### Creating a Stellar account
+We will use the following two properties for communicating with the network :
+```
+@Value("${stellar.network.url}")
+private String network;
 
+@Value("${stellar.network.friendbot}")
+private String friendbot;
+```
 ![alt text](docs/home.png)
 
 After you login click the "Open a New Account" link to create a new account associated with your User credentials.
@@ -144,14 +151,7 @@ As with any blockchain implementation, you need a private key to sign all your t
 
 We then seed this account using the Stellar's Friendbot service to give us 10,000 XLMs.
 
-We will use the following two properties for communicating with the network :
-```
-@Value("${stellar.network.url}")
-private String network;
 
-@Value("${stellar.network.friendbot}")
-private String friendbot;
-```
 
 ### Querying the balance
 
