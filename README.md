@@ -158,7 +158,7 @@ You can then see this account information live on  https://stellarchain.io/
 
 ![alt text](docs/stellarchain.png)
 Make sure you switch the network to TESTNET as shown and then enter the account number. 
-Then enter to see 10,000 Lumens and their equavalent values in othe currencies. Know that this is just testing money and not real :-)
+Then enter to see 10,000 Lumens and their equivalent values in othe currencies. Know that this is just testing money and not real :-)
 
 
 ### Querying the balance
