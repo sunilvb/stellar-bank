@@ -151,6 +151,14 @@ As with any blockchain implementation, you need a private key to sign all your t
 
 We then seed this account using the Stellar's Friendbot service to give us 10,000 XLMs.
 
+Note down your account information as it is printed on the console output.
+
+![alt text](docs/debug.png)
+You can then see this account information live on  https://stellarchain.io/
+
+![alt text](docs/stellarchain.png)
+Make sure you switch the network to TESTNET as shown and then enter the account number. 
+Then enter to see 10,000 Lumens and their equavalent values in othe currencies. Know that this is just testing money and not real :-)
 
 
 ### Querying the balance
