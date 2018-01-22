@@ -23,11 +23,14 @@ Most applications interact with the Stellar network through Horizon, a RESTful H
 For this tutorial we will be using the test network :  https://horizon-testnet.stellar.org. 
 The test network allows us to create new accounts and seed them with 10,000 Lumens(XLM) to play with.
 
-Download the SDK from [Stellar.org](https://github.com/stellar/java-stellar-sdk) to your local file system
+### Download the SDK 
 
-Notice that this a jar file that needs to be imported into your local Maven repo.
+Download the SDK from [Stellar.org](https://github.com/stellar/java-stellar-sdk) to your local file system.
 
-### Import the jar into Maven repo
+Notice that this a jar file that needs to be imported into your local Maven repo before we can use it in our project as a dependency.
+
+
+### Import the jar into your local Maven repo
 
 Use the following command to import the SDK jar file into your Maven repo:
 
@@ -55,7 +58,7 @@ Then add the dependancy in your pom.xml file like so :
 
 ```
 
-Note: this dependancy is already added in the source.
+Note: this dependancy is already added in the source pom.xml.
 
 ### Installing
 
