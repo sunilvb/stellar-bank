@@ -60,9 +60,9 @@ Then add the dependancy in your pom.xml file like so :
 
 Note: this dependancy is already added in the source pom.xml.
 
-### Installing
+### Installing and Running
 
-To run the sample, install Maven, Java 1.8+, MySql and download the code. 
+To run the sample install Java 1.8+, Maven,  MySql for your OS and download the code. 
 Edit the application.properties file to setup your DB connection.
 
 And simply run this command in the source root
