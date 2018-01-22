@@ -194,5 +194,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Donations :
 XLM => GCFV72GPGTP7QY5HZUE5YGFO5LZ3PXO6Q7OGT6VKZZFBQ2AO62THYJA5
+
 ETH => 
+
 BTC => not that rich yet :-(
