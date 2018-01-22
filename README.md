@@ -16,6 +16,11 @@ The following topics are covered in this tutorial:
 
 ## Getting Started
 
+![alt text](docs/Stellar.jpg)
+
+
+The Java Stellar Sdk library provides APIs to build transactions and connect to Horizon.
+
 download the SDK from [Stellar.org](https://github.com/stellar/java-stellar-sdk) to your local file system
 
 notice that this a jar file that needs to be imported into your local Maven repo.
