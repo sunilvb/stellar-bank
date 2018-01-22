@@ -84,30 +84,32 @@ login screen :
 
 Asuming your DB is up and running, you should see the login screen. As a first time user, go ahead and click the "Join us" link to create a new user with your email and a password. Use these credentials to login after you finish registering. 
 
+### Use Registration
+
 The following method in the is used to accomplish this:
 ```
 @RequestMapping(value = "/registration", method = RequestMethod.POST)
-	public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
-		ModelAndView modelAndView = new ModelAndView();
-		User userExists = userService.findUserByEmail(user.getEmail());
-		if (userExists != null) {
-			bindingResult.rejectValue("email", "error.user",
+public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
+	ModelAndView modelAndView = new ModelAndView();
+	User userExists = userService.findUserByEmail(user.getEmail());
+	if (userExists != null) {
+		bindingResult.rejectValue("email", "error.user",
 					"There is already a user registered with the email provided");
-		}
-		if (bindingResult.hasErrors()) {
-			System.out.println("There was an error...");
-			modelAndView.setViewName("registration");
-		} else {
-			userService.saveUser(user);
-			modelAndView.addObject("successMessage", "User registered successfully. Please login.");
-			modelAndView.addObject("user", new User());
-			modelAndView.setViewName("login");
-
-		}
-		return modelAndView;
 	}
+	if (bindingResult.hasErrors()) {
+		System.out.println("There was an error...");
+		modelAndView.setViewName("registration");
+	} else {
+		userService.saveUser(user);
+		modelAndView.addObject("successMessage", "User registered successfully. Please login.");
+		modelAndView.addObject("user", new User());
+		modelAndView.setViewName("login");
+
+	}
+	return modelAndView;
+}
 ```
-### Creating an account
+### Creating a Stellar account
 
 After you login
 This happens in the AccountService.java class as shown below:
