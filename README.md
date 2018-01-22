@@ -18,12 +18,14 @@ The following topics are covered in this tutorial:
 
 ![alt text](docs/Stellar.jpg)
 
+Most applications interact with the Stellar network through Horizon, a RESTful HTTP API server. Horizon gives you a straightforward way to submit transactions, check accounts, and subscribe to events. The Java Stellar Sdk library provides APIs to build transactions and connect to Horizon.
 
-The Java Stellar Sdk library provides APIs to build transactions and connect to Horizon.
+For this tutorial we will be using the test network :  https://horizon-testnet.stellar.org
+The test network allows to create new accounts and seed them with 10,000 Lumens(XLM) to play with.
 
-download the SDK from [Stellar.org](https://github.com/stellar/java-stellar-sdk) to your local file system
+Download the SDK from [Stellar.org](https://github.com/stellar/java-stellar-sdk) to your local file system
 
-notice that this a jar file that needs to be imported into your local Maven repo.
+Notice that this a jar file that needs to be imported into your local Maven repo.
 
 ### Import the jar into Maven repo
 
